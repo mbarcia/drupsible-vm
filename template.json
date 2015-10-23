@@ -60,7 +60,7 @@
       "ssh_wait_timeout": "10000s",
       "headless" : false,
       "shutdown_command": "echo 'halt -p' > shutdown.sh; echo 'vagrant'|sudo -S bash 'shutdown.sh'",
-      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
+      "guest_additions_path": "VBoxGuestAdditions_5.0.6.iso",
       "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
         [
