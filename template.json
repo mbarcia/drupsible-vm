@@ -7,7 +7,7 @@
     "atlas_username": "{{env `ATLAS_USERNAME`}}",
     "atlas_name": "drupsible",
     "drupsible_role": "controller",
-    "version": "0.9.8"
+    "version": "0.9.9"
   },
   "provisioners": [
     {
@@ -48,7 +48,7 @@
         "<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 5070,
+      "disk_size": 6144,
       "guest_os_type": "Debian_64",
       "http_directory": "http",
       "iso_checksum": "923cd1bfbfa62d78aecaa92d919ee54a95c8fca834b427502847228cf06155e7243875f59279b0bf6bfd1b579cbe2f1bc80528a265dafddee9a9d2a197ef3806",
