@@ -1,14 +1,14 @@
 # Update the box
 apt-get -y update
 apt-get -y install linux-headers-$(uname -r) build-essential
-apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
+apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev libffi-dev
 apt-get -y install curl unzip
 
 # Add Ansible
 apt-get -y install git python python-dev python-setuptools python-pip python-netaddr
 # Make sure setuptools are installed crrectly.
-pip install setuptools --upgrade
-pip install paramiko pyyaml jinja2 markupsafe
+pip install setuptools setupext-pip cryptography --upgrade
+pip install paramiko PyYAML Jinja2 httplib2 six markupsafe
 pip install ansible
 
 # Set up sudo
