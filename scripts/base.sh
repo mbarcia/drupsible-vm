@@ -9,7 +9,7 @@ apt-get -y install git python python-dev python-setuptools python-pip python-net
 # Make sure setuptools are installed crrectly.
 pip install setuptools setupext-pip cryptography --upgrade
 pip install paramiko PyYAML Jinja2 httplib2 six markupsafe
-pip install ansible
+pip install ansible==2.0.2.0
 
 # Set up sudo
 echo 'vagrant ALL=NOPASSWD:ALL' > /etc/sudoers.d/vagrant
