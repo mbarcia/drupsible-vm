@@ -7,7 +7,8 @@ apt-get -y install curl unzip
 # Add Ansible
 apt-get -y install git python python-dev python-setuptools python-pip python-netaddr
 # Make sure setuptools are installed crrectly.
-pip install setuptools setupext-pip cryptography --upgrade
+pip install setuptools setupext-pip --upgrade
+pip install cryptography --upgrade
 pip install paramiko PyYAML Jinja2 httplib2 six markupsafe
 pip install ansible==2.0.2.0
 
