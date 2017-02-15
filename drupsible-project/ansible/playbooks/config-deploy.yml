@@ -1,0 +1,4 @@
+---
+- include: core.yml
+- include: config-no-core.yml
+- include: deploy-no-core.yml

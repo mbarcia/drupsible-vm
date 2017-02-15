@@ -13,7 +13,27 @@
     {
       "type": "shell",
       "scripts": [
-        "scripts/base.sh",
+        "scripts/base.sh"
+      ],
+      "override": {
+        "virtualbox-iso": {
+          "execute_command": "echo 'vagrant'|{{.Vars}} sudo -E -S bash '{{.Path}}'"
+        }
+      }
+    },
+    {
+      "type": "ansible-local",
+      "playbook_dir": "./drupsible-project/ansible/playbooks/",
+      "playbook_file": "./drupsible-project/ansible/playbooks/config.yml",
+      "inventory_file": "./drupsible-project/ansible/inventory/d8-local",
+      "galaxy_file": "./drupsible-project/ansible/requirements.yml",
+      "extra_arguments": [ "--extra-vars 'app_name=d8 app_target=local packer=yes app_user=vagrant app_group=www-data smtp_server=localhost smtp_user=dummy smtp_password=dummy'", 
+        "--tags 'provision,meta::provision'" 
+       ]
+    },
+    {
+      "type": "shell",
+      "scripts": [
         "scripts/vagrant.sh",
         "scripts/virtualbox.sh",
         "scripts/cleanup-virtualbox.sh",

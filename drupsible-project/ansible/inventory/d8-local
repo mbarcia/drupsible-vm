@@ -1,0 +1,26 @@
+#
+# Local
+#
+localhost ansible_connection=local
+
+[d8:children]
+d8-local
+
+[d8-local:children]
+d8-local_mysql
+d8-local_deploy
+d8-local_varnish
+
+[d8-local_varnish]
+localhost
+
+[d8-local_deploy]
+localhost
+
+[d8-local_mysql]
+localhost
+
+[d8:vars]
+app_target=local
+app_webhost=local
+app_webdomain=drupsible.org
