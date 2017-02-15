@@ -7,7 +7,7 @@
     "atlas_username": "{{env `ATLAS_USERNAME`}}",
     "atlas_name": "drupsible",
     "drupsible_role": "controller",
-    "version": "1.1"
+    "version": "1.2"
   },
   "provisioners": [
     {
