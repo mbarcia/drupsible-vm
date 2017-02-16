@@ -27,7 +27,7 @@
       "playbook_file": "./drupsible-project/ansible/playbooks/config.yml",
       "inventory_file": "./drupsible-project/ansible/inventory/d8-local",
       "galaxy_file": "./drupsible-project/ansible/requirements.yml",
-      "extra_arguments": [ "--extra-vars 'app_name=d8 app_target=local packer=yes app_user=vagrant app_group=www-data smtp_server=localhost smtp_user=dummy smtp_password=dummy'", 
+      "extra_arguments": [ "--extra-vars 'app_name=d8 app_drupal_version=8 app_varnish_enabled=yes app_target=local packer=yes app_user=vagrant app_group=www-data smtp_server=localhost smtp_user=dummy smtp_port=25'", 
         "--tags 'provision,meta::provision'" 
        ]
     },
@@ -87,7 +87,7 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "512"
+          "1024"
         ],
         [
           "modifyvm",

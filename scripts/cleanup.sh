@@ -3,6 +3,9 @@ apt-get -y remove linux-headers-$(uname -r) build-essential
 apt-get -y autoremove
 apt-get -y clean
 
+# Remove Ansible roles
+rm -fr /etc/ansible/roles/*.*
+
 # Removing leftover leases and persistent rules
 echo "cleaning up dhcp leases"
 rm /var/lib/dhcp/*
